@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仙侠名称生成器</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style></style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>仙侠名称生成器</h1>
+            <p>为你的仙侠小说创作提供灵感</p>
+        </header>
+
+        <main>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="character">角色</button>
+                <button class="tab-btn" data-tab="sect">宗门</button>
+                <button class="tab-btn" data-tab="realm">秘境</button>
+                <button class="tab-btn" data-tab="location">地名</button>
+                <button class="tab-btn" data-tab="artifact">法宝</button>
+                <button class="tab-btn" data-tab="pill">丹药</button>
+                <button class="tab-btn" data-tab="spell">术法</button>
+            </div>
+
+            <div class="tab-content active" id="character-tab">
+                <h2>角色姓名生成</h2>
+                <div class="form-options">
+                    <div class="form-group">
+                        <label>姓氏</label>
+                        <input type="text" id="surname" placeholder="留空随机生成">
+                    </div>
+                    <div class="form-group">
+                        <label>性别</label>
+                        <select id="gender">
+                            <option value="any" selected>随机</option>
+                            <option value="male">男性</option>
+                            <option value="female">女性</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>单姓/复姓</label>
+                        <select id="surname-type">
+                            <option value="random" selected>随机</option>
+                            <option value="single">单姓</option>
+                            <option value="double">复姓</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>名字长度</label>
+                        <select id="name-type">
+                            <option value="random" selected>随机</option>
+                            <option value="single">单字名</option>
+                            <option value="double">双字名</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="generate-character" class="generate-btn">生成角色姓名</button>
+                <div class="result-box" id="character-result">
+                    <div class="result-list"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="sect-tab">
+                <h2>宗门名称生成</h2>
+                <div class="form-options">
+                    <div class="form-group">
+                        <label>后缀</label>
+                        <input type="text" id="sect-suffix" value="" placeholder="留空随机选择后缀">
+                    </div>
+                </div>
+                <button id="generate-sect" class="generate-btn">生成宗门名称</button>
+                <div class="result-box" id="sect-result">
+                    <div class="result-list"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="realm-tab">
+                <h2>秘境名称生成</h2>
+                <div class="form-options">
+                    <div class="form-group">
+                        <label>后缀</label>
+                        <input type="text" id="realm-suffix" value="" placeholder="留空随机选择后缀">
+                    </div>
+                </div>
+                <button id="generate-realm" class="generate-btn">生成秘境名称</button>
+                <div class="result-box" id="realm-result">
+                    <div class="result-list"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="location-tab">
+                <h2>地名生成</h2>
+                <div class="form-options">
+                    <div class="form-group">
+                        <label>后缀</label>
+                        <input type="text" id="location-suffix" value="" placeholder="留空随机选择后缀">
+                    </div>
+                </div>
+                <button id="generate-location" class="generate-btn">生成地名</button>
+                <div class="result-box" id="location-result">
+                    <div class="result-list"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="artifact-tab">
+                <h2>法宝名称生成</h2>
+                <div class="form-options">
+                    <div class="form-group">
+                        <label>法宝类型</label>
+                        <input type="text" id="artifact-type" value="" placeholder="留空随机选择法宝类型">
+                    </div>
+                </div>
+                <button id="generate-artifact" class="generate-btn">生成法宝名称</button>
+                <div class="result-box" id="artifact-result">
+                    <div class="result-list"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="pill-tab">
+                <h2>丹药名称生成</h2>
+                <button id="generate-pill" class="generate-btn">生成丹药名称</button>
+                <div class="result-box" id="pill-result">
+                    <div class="result-list"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="spell-tab">
+                <h2>术法名称生成</h2>
+                <button id="generate-spell" class="generate-btn">生成术法名称</button>
+                <div class="result-box" id="spell-result">
+                    <div class="result-list"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>仙侠名称生成器 &copy; 2023</p>
+        </footer>
+    </div>
+
+    <div class="toast-container">
+        <div class="toast"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 
